@@ -1,0 +1,50 @@
+.hector-car-container {
+  width: 400px;
+  height: 100%;
+  background-image: url('../assets/mghector.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 220px;
+  left: calc(50%);
+  translate: -70%;
+  animation: hector-animation 5s linear forwards;
+}
+
+@keyframes hector-animation {
+  0% {
+    transform: calc(50%);
+  }
+
+  100% {
+    transform: translate(100vw);
+  }
+}
+
+@keyframes hector-wheel-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.hector-wheels {
+  position: absolute;
+  top: 125px;
+  animation: hector-wheel-rotation 3s linear infinite;
+
+}
+
+.hector-front-wheel-position {
+  left: 302px;
+}
+
+.hector-rear-wheel-position {
+  left: 52px;
+}
