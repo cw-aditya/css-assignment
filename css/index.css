@@ -116,12 +116,34 @@ body {
 }
 @keyframes translate-left-to-right-animation {
   0% {
-    transform: 50%;
+    transform: translate(0);
   }
 
   100% {
     transform: translate(100vw);
   }
+}
+.hector-car-container::before{
+  content: "";
+  display: block;
+  width: 49px;
+  height: 49px;
+  background-image: url('../assets/hector-wheel.png');
+  position: absolute;
+  top: 125px;
+  animation: wheel-rotation-clockwise 3s linear infinite;
+  left: 52px;
+}
+.hector-car-container::after{
+  content: "";
+  display: block;
+  width: 49px;
+  height: 49px;
+  background-image: url('../assets/hector-wheel.png');
+  position: absolute;
+  top: 125px;
+  animation: wheel-rotation-clockwise 3s linear infinite;
+  left: 302px;
 }
 @keyframes wheel-rotation-clockwise {
   0% {
@@ -131,17 +153,6 @@ body {
   100% {
     transform: rotate(720deg);
   }
-}
-.hector-wheels {
-  position: absolute;
-  top: 125px;
-  animation: wheel-rotation-clockwise 3s linear infinite;
-}
-.hector-front-wheel-position {
-  left: 302px;
-}
-.hector-rear-wheel-position {
-  left: 52px;
 }
 .mgzs-car-container {
   width: 350px;
@@ -154,22 +165,40 @@ body {
   justify-content: center;
   align-items: center;
   top: 200px;
-  left: calc(50%);
+  left: 50%;
   translate: -10%;
   animation: translate-right-to-left-animation 5s linear forwards;
 }
 @keyframes translate-right-to-left-animation {
   0% {
-    transform: calc(50%);
+    transform: translate(0);
   }
   100% {
     transform: translate(-100vw);
   }
 }
-.mgzs-wheels {
+
+.mgzs-car-container::before {
+  content: "";
+  display: block;
+  width: 49px;
+  height: 49px;
+  background-image: url('../assets/mgzswheel.png');
   position: absolute;
   top: 123px;
   animation: wheel-rotation-anti-clockwise 3s linear infinite;
+  left: 47px;
+}
+.mgzs-car-container::after {
+  content: "";
+  display: block;
+  width: 49px;
+  height: 49px;
+  background-image: url('../assets/mgzswheel.png');
+  position: absolute;
+  top: 123px;
+  animation: wheel-rotation-anti-clockwise 3s linear infinite;
+  left: 261px;
 }
 @keyframes wheel-rotation-anti-clockwise {
   0% {
@@ -178,10 +207,4 @@ body {
   100% {
     transform: rotate(0deg);
   }
-}
-.mgzs-front-wheel-position {
-  left: 261px;
-}
-.mgzs-rear-wheel-position {
-  left: 47px;
 }
